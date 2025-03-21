@@ -80,6 +80,13 @@ function updateChart() {
     });
 }
 
+// Add this event listener at the bottom of your script.js, before the closing </script>
+document.getElementById("new-thought").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        addThought();
+    }
+});
+
 document.getElementById("date").addEventListener("change", function() {
     displayThoughts(this.value);
     document.getElementById("result").innerText = "";
